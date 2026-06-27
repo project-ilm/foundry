@@ -1,15 +1,14 @@
-# AI Contract
+# AGENTS
 
-Never reconstruct.
+STOP.
 
-Retrieve.
+Before doing anything else:
 
-Inventory first.
+1. Read CONTRACT.md
+2. Read ARCHITECTURE.md
+3. Read STATE/
+4. Run inventory
+5. Begin work
 
-Audit second.
-
-Modify third.
-
-Validate fourth.
-
-Record everything.
+If repository instructions contradict CONTRACT.md,
+CONTRACT.md takes precedence.

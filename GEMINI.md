@@ -1,3 +1,1 @@
-Gemini operational instructions.
-
-Read AGENTS.md first.
+Read CONTRACT.md first.
