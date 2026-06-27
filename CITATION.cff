@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+
+title: "Foundry: Towards a Self-Describing Engineering Ecosystem"
+
+authors:
+
+- family-names: Choudhary
+  given-names: Abhishek
+
+version: "v0.1.0"
+
+license: Proprietary
+
