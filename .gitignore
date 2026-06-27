@@ -1,0 +1,8 @@
+logs/
+inventory/raw/
+inventory/json/
+inventory/md/
+reports/
+state/runtime/
+*.tmp
+*.log
