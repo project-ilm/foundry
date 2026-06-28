@@ -1,0 +1,145 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ILM — Research workflows, and why the operating system stopped mattering</title>
+<meta name="description" content="How journal, conference, and publication workflows compose over one universal workflow grammar — and why Linux, Windows, or macOS is immaterial when the host is minimal and everything above it is a reproducible, portable capability.">
+<link rel="stylesheet" href="/assets/site.css">
+<meta property="og:title" content="ILM — Research workflows & the immaterial OS">
+<meta property="og:description" content="Journal & conference workflow management over a universal grammar, and the case for a minimal host with everything above it portable across offline, local, and cloud.">
+<meta property="og:type" content="article"><meta property="og:url" content="https://ilm.codes/workflows/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://ilm.codes/workflows/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TechArticle","headline":"Research workflows, and why the operating system stopped mattering","author":{"@type":"Person","name":"Abhishek Choudhary"},"isPartOf":{"@type":"ResearchProject","name":"Project ILM — Integrative Linguistic Multiscript","url":"https://ilm.codes"},"keywords":"research workflow, journal management, conference management, reproducibility, containers, deployment continuum, minimal host, portability","url":"https://ilm.codes/workflows/"}
+</script>
+</head><body>
+
+<header class="hero">
+ <h1 style="font-size:clamp(2rem,6vw,3.4rem)">Workflows</h1>
+ <p class="sub" style="margin-top:.6rem;font-style:normal;color:#fff;font-size:clamp(1.1rem,2.6vw,1.7rem);letter-spacing:.03em">Research, journal &amp; conference management over one grammar</p>
+ <p class="sub"><b style="color:var(--acc)">The operating system stopped mattering.</b> When the host is minimal and everything above it is a reproducible, portable capability, <em>Linux vs Windows vs macOS</em> is an implementation detail — not a constraint on the work.</p>
+ <div class="scrollcue">SCROLL ▾</div>
+</header>
+
+<main>
+
+<section class="flow"><div class="wrap reveal">
+ <h2>The premise</h2>
+ <p class="lead">Most researchers still wire their tooling to a machine: a specific laptop, a specific OS, a specific set of installed apps. That coupling is the reason a workflow that runs in the lab dies on a field laptop, a collaborator's desktop, or an air-gapped reviewer's machine. It does not have to be that way. Two ideas, taken seriously, remove the coupling entirely:</p>
+ <div class="cards">
+  <div class="card">
+   <h3 style="color:var(--acc)">1 · One workflow grammar</h3>
+   <p>Every research, publication, journal, and conference process decomposes into the <b>same small set of verbs</b>. Once you see the grammar, "journal submission" and "conference submission" stop being bespoke procedures and become parameterised instances of one pattern.</p>
+  </div>
+  <div class="card">
+   <h3 style="color:var(--acc)">2 · A minimal host</h3>
+   <p>Keep the operating system <b>small, stable, and boring</b>. Put every capability that actually does work — the toolchains, the models, the publishing pipeline — into reproducible units that run anywhere. The host becomes an execution substrate, not a development machine.</p>
+  </div>
+ </div>
+ <p class="lead" style="margin-top:1.2rem">The rest of this page makes both concrete: the grammar first, then journal and conference management as instances of it, then the argument for why the OS is immaterial — and what that buys a researcher in a place with no reliable internet.</p>
+</div></section>
+
+<section class="flow"><div class="wrap reveal">
+ <h2>The universal workflow grammar</h2>
+ <p class="lead">Industry, research, government, education — every domain's processes reduce to twelve verbs. This is not a metaphor; it is the operational vocabulary that the publishing, journal, and conference flows below are built from.</p>
+ <div class="dash" style="grid-template-columns:repeat(auto-fit,minmax(130px,1fr))">
+  <div class="stat"><b class="mono">Observe</b><div class="sub">sense the current state</div></div>
+  <div class="stat"><b class="mono">Acquire</b><div class="sub">obtain inputs, rights, funding</div></div>
+  <div class="stat"><b class="mono">Create</b><div class="sub">produce the artifact</div></div>
+  <div class="stat"><b class="mono">Transform</b><div class="sub">convert between forms</div></div>
+  <div class="stat"><b class="mono">Validate</b><div class="sub">check against a standard</div></div>
+  <div class="stat"><b class="mono">Approve</b><div class="sub">gate on a decision</div></div>
+  <div class="stat"><b class="mono">Publish</b><div class="sub">release to an audience</div></div>
+  <div class="stat"><b class="mono">Operate</b><div class="sub">run the live thing</div></div>
+  <div class="stat"><b class="mono">Maintain</b><div class="sub">keep it correct over time</div></div>
+  <div class="stat"><b class="mono">Archive</b><div class="sub">preserve immutably</div></div>
+  <div class="stat"><b class="mono">Recover</b><div class="sub">restore from a known state</div></div>
+  <div class="stat"><b class="mono">Retire</b><div class="sub">end-of-life with provenance</div></div>
+ </div>
+ <p class="lead" style="margin-top:1.2rem">Compliance is not a thirteenth verb — it is a property attached to the verbs. <b>Anonymisation, consent (IRB/IACUC/IEC), privacy law (GDPR/HIPAA), ethics review, export control, records management, and legal hold</b> are checkpoints embedded <em>inside</em> Acquire, Transform, Publish, and Archive. A workflow is compliant when those checkpoints are verifiable nodes in the graph, not a PDF someone signed afterwards.</p>
+</div></section>
+
+<section class="flow"><div class="wrap reveal">
+ <h2>Journal workflow management</h2>
+ <p class="lead">A journal submission is a fixed path through the grammar. Naming the stages is what makes the process trackable, automatable where an API exists, and honestly manual where one does not.</p>
+ <div class="cards">
+  <div class="card"><h3>Before submission</h3><p><b class="mono">Observe → Validate</b><br>Journal discovery and fit-scoring: does the venue's scope, audience, and impact match the work? Formatting automation to the target's template. Cover-letter generation.</p></div>
+  <div class="card"><h3>Submission</h3><p><b class="mono">Publish → Approve</b><br>Package the manuscript, figures, and supplementary material. Most journals (OJS, ScholarOne, Editorial Manager) expose no public API — so this stage is a tracked <em>manual</em> hand-off, fed by a complete, reviewer-ready bundle.</p></div>
+  <div class="card"><h3>Under review</h3><p><b class="mono">Maintain</b><br>Status tracking (submitted → under review → revisions → accepted). Reviewer-response management: every comment mapped to a change, with a revision trail. Supplementary-material versioning.</p></div>
+  <div class="card"><h3>Acceptance</h3><p><b class="mono">Archive</b><br>Camera-ready, then deposit. The accepted version is timestamped and assigned a DOI so the record is permanent and citable independent of the publisher.</p></div>
+ </div>
+ <p class="lead" style="margin-top:1.2rem">The load-bearing honesty: <b>where a portal has no API, the workflow does not pretend to automate it.</b> It produces a self-contained, checksummed bundle — manifest, all metadata formats, a cryptographic timestamp — and hands that to the manual step. The tracking layer (a small status record per paper) is what turns "I think it's still under review" into a fact.</p>
+</div></section>
+
+<section class="flow"><div class="wrap reveal">
+ <h2>Conference workflow management</h2>
+ <p class="lead">Same grammar, different parameters. Conferences add a deadline economy and a presentation tail that journals lack.</p>
+ <div class="cards">
+  <div class="card"><h3>Discovery</h3><p><b class="mono">Observe</b><br>Call-for-papers discovery and deadline tracking across venues. Scope-matching against the work in flight.</p></div>
+  <div class="card"><h3>Submission</h3><p><b class="mono">Transform → Publish</b><br>Anonymised version generation for double-blind review, submission packaging, and the camera-ready workflow. Most conference systems (EasyChair, HotCRP) are, again, manual portals fed by a complete bundle.</p></div>
+  <div class="card"><h3>Review &amp; response</h3><p><b class="mono">Maintain</b><br>Reviewer-response management and rebuttal tracking under a hard clock.</p></div>
+  <div class="card"><h3>Presentation</h3><p><b class="mono">Operate → Archive</b><br>Presentation and poster generation, poster variants, travel planning. The talk and slides are deposited alongside the paper so the artifact outlives the event.</p></div>
+ </div>
+</div></section>
+
+<section class="flow"><div class="wrap reveal">
+ <h2>The same bundle feeds everything downstream</h2>
+ <p class="lead">Research → development → experiment → DOI is the spine. Once an artifact is publication-worthy, a single canonical metadata record drives every output format — Zenodo deposit, DataCite, codemeta, CITATION.cff — and a single <span class="mono">result</span> with a DOI becomes the trigger for the announcement, the community post, and the educational follow-on. One record in; many channels out. That is the only point where the "experiment" and "publication" workflows need to touch.</p>
+ <p class="lead" style="margin-top:1rem">
+  <a class="btn" href="https://github.com/project-ilm/misty-doi">The DOI automation contract</a>
+  <a class="btn ghost" href="https://github.com/project-ilm/foundry">The Foundry survey &amp; tool inventory</a>
+ </p>
+</div></section>
+
+<section class="flow"><div class="wrap reveal">
+ <h2>Why the operating system is immaterial</h2>
+ <p class="lead">Here is the part that surprises people. Every workflow above runs identically on Linux, Windows, macOS, a Raspberry Pi in a village classroom, or a cloud VM — because <b>none of the work lives in the operating system.</b> The discipline that makes this true is simple and old:</p>
+ <div class="cards">
+  <div class="card">
+   <h3 style="color:var(--cy)">The host stays minimal</h3>
+   <p>The operating system's job is reduced to four things: hardware enablement, a container runtime, networking, and a cryptographic identity. It is small, stable, and slowly-changing. Nothing project-specific is installed on it. It is replaceable and disposable.</p>
+  </div>
+  <div class="card">
+   <h3 style="color:var(--cy)">Capabilities live above it</h3>
+   <p>Every toolchain, model, language runtime, and publishing pipeline lives in a reproducible unit — a container or an equivalent declarative environment. These are instantiated on demand and discarded without perturbing the host. The capability is portable; the host is interchangeable.</p>
+  </div>
+  <div class="card">
+   <h3 style="color:var(--cy)">State lives in artifacts, not machines</h3>
+   <p>Code, metadata, contracts, inventories, and provenance live in repositories and registries — not in one laptop's home directory. Any machine that can read the repository can reconstruct the full working state. The conversation that built it is a bootstrap, not the memory.</p>
+  </div>
+ </div>
+ <p class="lead" style="margin-top:1.2rem">Once those three hold, the OS underneath is a detail you stop thinking about — the same way you stop thinking about which brand of electricity meter is on the wall. <b>Computing becomes infrastructure.</b> The question "but does it run on my OS?" dissolves, because the answer is always yes: the host only has to run the runtime, and the runtime runs everywhere.</p>
+</div></section>
+
+<section class="flow"><div class="wrap reveal">
+ <h2>The deployment continuum — including where the internet is bad</h2>
+ <p class="lead">This is not a cloud argument. The same capability runs across a continuum, with <b>graceful degradation</b> and seamless synchronisation when connectivity returns. AGI approaching does not mean every remote corner has good internet — so the base layers are common and always-present, and the heavier upper layers arrive just-in-time when a link is available, or ship pre-staged when it is not.</p>
+ <div class="dash" style="grid-template-columns:repeat(auto-fit,minmax(120px,1fr))">
+  <div class="stat"><b class="mono">Offline</b><div class="sub">fully local, no link required</div></div>
+  <div class="stat"><b class="mono">Local</b><div class="sub">one machine</div></div>
+  <div class="stat"><b class="mono">LAN</b><div class="sub">a building, a clinic, a school</div></div>
+  <div class="stat"><b class="mono">Edge</b><div class="sub">near the data</div></div>
+  <div class="stat"><b class="mono">Private cloud</b><div class="sub">your own servers</div></div>
+  <div class="stat"><b class="mono">Hybrid</b><div class="sub">private + public, one workflow</div></div>
+  <div class="stat"><b class="mono">Public cloud</b><div class="sub">elastic scale</div></div>
+  <div class="stat"><b class="mono">Planetary</b><div class="sub">federated, multi-region</div></div>
+ </div>
+ <p class="lead" style="margin-top:1.2rem">A field researcher on an intermittent connection runs the <em>offline</em> profile: the common base layer is already on the device, the work proceeds, and results sync upward when a link appears. A lab with servers runs the <em>private</em> profile. A burst of heavy compute borrows the <em>public</em> tier and releases it. <b>The workflow does not change — only which tier it lands on.</b> That is what "seamless private to hybrid to public" actually means in practice: one definition, many places it can execute, no rewrite between them.</p>
+</div></section>
+
+<section class="flow"><div class="wrap reveal">
+ <h2>What this means for you, concretely</h2>
+ <p class="lead">If you are setting up to work this way, the order is: <b>(1)</b> get the universal base layer running on whatever host you have — the runtime, nothing more; <b>(2)</b> pull the capability units you need for your domain on demand; <b>(3)</b> keep your state in a repository so any machine can resume it. After that, your choice of operating system is yours to make on comfort and cost, not on capability — and your workflow will outlive the machine you started it on.</p>
+ <p class="lead" style="margin-top:1rem">The base layers are common to everyone. The upper layers are yours, on demand or pre-staged. That is the whole arrangement.</p>
+ <p class="lead" style="margin-top:1.4rem">
+  <a class="btn ghost" href="/">← Back to ILM</a>
+ </p>
+</div></section>
+
+</main>
+
+<footer class="site" style="text-align:center;padding:2rem 1rem;color:var(--mut);border-top:1px solid var(--line);margin-top:2rem">
+ <p class="mono" style="font-size:.85rem">Project ILM · Integrative Linguistic Multiscript</p>
+ <p class="mono" style="font-size:.8rem;margin-top:.4rem">Computing is infrastructure · Workflows are code · © 1993–2026 Abhishek Choudhary</p>
+</footer>
+
+</body></html>

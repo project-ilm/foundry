@@ -1,0 +1,20 @@
+{
+  "title": "Foundry: An Architecture Survey for a Civilizational Research Operating System (Poster Set)",
+  "version": "1.0.0",
+  "upload_type": "poster",
+  "description": "<p>A five-poster visual survey of <strong>Foundry</strong> — a proposed knowledge kernel and engineering substrate for long-duration, human–AI collaborative research programmes. The set maps an integrated landscape of tools, workflows, and architectural vision, from a concrete tool/workflow inventory to a post-AGI civilizational operating-system architecture.</p><p>Posters: (1) Foundry Ecosystem Architecture Survey; (2) The Knowledge Kernel of a Civilizational Operating System; (3) The Civilizational Workflow Architecture (ISCO/ISCED/ISIC); (4–5) The Method Behind the Infrastructure. Part of Project ILM / AyeAI.</p>",
+  "license": "cc-by-sa-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "creators": [
+    {"name": "Choudhary, Abhishek", "affiliation": "AyeAI Consulting / Project ILM"}
+  ],
+  "keywords": ["research operating system","human-AI collaboration","engineering substrate","workflow architecture","ISCO","ISCED","ISIC","post-AGI","knowledge kernel","provenance","reproducibility","Project ILM","Foundry","AyeAI"],
+  "related_identifiers": [
+    {"relation":"isPartOf","identifier":"https://ilm.codes","resource_type":"other"},
+    {"relation":"isSupplementedBy","identifier":"https://github.com/project-ilm/foundry","resource_type":"software"},
+    {"relation":"references","identifier":"https://github.com/project-ilm/misty-doi","resource_type":"software"}
+  ],
+  "repository": "https://github.com/project-ilm/foundry",
+  "notes": "LICENSE DECISION FLAGGED: source images carry 'All rights reserved', which contradicts open release. This deposit defaults to CC-BY-SA-4.0 on the assumption that 'publish these' means open release. Override before minting if intent differs."
+}
