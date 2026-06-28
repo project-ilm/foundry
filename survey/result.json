@@ -1,0 +1,38 @@
+{
+  "tool": "misty-doi",
+  "state": "published",
+  "doi": "10.5281/zenodo.20986529",
+  "concept_doi": "10.5281/zenodo.20986528",
+  "record_url": "https://zenodo.org/record/20986529",
+  "deposition_id": 20986529,
+  "bucket": "https://zenodo.org/api/files/b56a1a7b-a70d-4419-822e-2a21443ef8f2",
+  "sandbox": false,
+  "files": [
+    {
+      "name": "01-foundry-ecosystem-architecture-survey.png",
+      "size": 2117054,
+      "sha256": "d6c15260621e082bc7b4a70b65eb2031019fd7e7111646ca46281ecf6b54dc79"
+    },
+    {
+      "name": "02-foundry-knowledge-kernel-civilizational-os.png",
+      "size": 1991352,
+      "sha256": "25dce07e4c124bd5e5237e103ba373895e8725a54d75b449656c7716eacba324"
+    },
+    {
+      "name": "03-foundry-civilizational-workflow-architecture.png",
+      "size": 2119101,
+      "sha256": "8f24772c3c5f0104ff254eae31e69c66690a73cbcb4cb25ee4b2b0766db34425"
+    },
+    {
+      "name": "04-method-behind-the-infrastructure-detailed.png",
+      "size": 2720877,
+      "sha256": "6fca244fd50e17ffb1c519d2eeaf3e610e80a3125ce2c3848cb8a5b6c8686430"
+    },
+    {
+      "name": "05-method-behind-the-infrastructure.png",
+      "size": 2057504,
+      "sha256": "2a89a4cac32b78371b59542b27f9d527f041e56c0ea5e0605ce9715b67792aba"
+    }
+  ],
+  "generated_at": "2026-06-28T03:38:01+00:00"
+}
